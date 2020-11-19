@@ -1,0 +1,25 @@
+.contact_page {
+    background-color: #E9E9EA;
+    // position: absolute;
+    // top: 80px;
+    // bottom: 0px;
+    // right: 0px;
+    // left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_input_style {
+    input, textarea {
+        background-color: transparent;
+        border: 2px solid #061673 !important;
+        border-radius: 5px;
+    }
+}
+
+.contact_social_links {
+    img {
+        width: 30px;
+    }
+}

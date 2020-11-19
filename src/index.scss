@@ -1,18 +1,32 @@
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.text-reflector {
+  color:#061673;
 }
 
-.wrap {
-  position: absolute;
-  width: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.text-pretty {
+  font-variant: all-petite-caps;
+}
+.bg-reflector {
+  background:#061673;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
-@import "tailwindcss/utilities";
+
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  p{
+    font-weight: 300;
+  }
+  p{
+    font-weight: 300;
+  }
+  h1,h2,h3,h4 {
+    font-weight: 700;
+  }
+  h5, h6 {
+    font-weight: 400;
+  }
+}

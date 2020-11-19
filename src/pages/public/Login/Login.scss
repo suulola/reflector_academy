@@ -1,0 +1,27 @@
+.login_style {
+    input {
+        background-color: #fff !important;
+        border: 1px solid #061673 !important;
+    }
+}
+
+.card {
+    min-width: 50%;
+    border-radius: 25px 0px 25px 25px;
+}
+
+.login_container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(31,29, 125, 0.5);
+    transition: background .5s;
+}
+
+.margin_bottom_0 {
+    margin-bottom: 0!important;
+}
