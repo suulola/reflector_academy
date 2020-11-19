@@ -59,8 +59,8 @@ const LandingPage = () => {
   return (
     <div>
       <div style={styles.container} className="row">
-        <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center w-100">
-          <div className="w-75 p-3">
+        <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center w-100 py-3">
+          <div className="w-75 p-2">
             <h4 className="text-reflector text-pretty" >
               We are building a Community that promotes Leadership, Innovation
               and Enterprise Development
@@ -79,11 +79,14 @@ const LandingPage = () => {
         style={styles.videoIntro}
         className="d-flex flex-column justify-content-center align-items-center"
       >
-        <h2 className="text-center text-reflector my-4">
+        <h2 className="text-center text-reflector my-4 d-none d-md-block">
           Welcome to Reflector Academy
         </h2>
+        <p className="text-reflector d-sm-block d-md-none text-center p-3">
+          Welcome to Reflector Academy
+        </p>
         <div className="mb-4">
-          <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
+          <ReactPlayer style={{minWidth: 200, maxWidth: 700}} width="75vw" url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
         </div>
         <Button text="See other Video Resources" solid={false} icon="arrow" />
       </div>

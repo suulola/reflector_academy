@@ -2,7 +2,7 @@
 
 Reflector Academy website
 
-![Jobify](./reflector.png)
+![Reflector Academy](./public/images/reflector.png)
 
 
 ## [Live version](https://reflectoracademy.com/)
@@ -16,8 +16,8 @@ Reflector Academy website
 ## Install
 
 ```sh
-  git clone git@github.com:mysuulola/reflector-academy.git
-  cd reflector-academy
+  git clone git@github.com:mysuulola/reflector_academy.git
+  cd reflector_academy
   run yarn install in your terminal
   ```
 

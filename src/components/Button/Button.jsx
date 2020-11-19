@@ -13,8 +13,9 @@ function Button({ text, solid, icon, white, full }) {
       style={{
         color: white || solid ? "white" : "#061673",
         border: white ? "1px solid #fff" : "1px solid #061673",
-        minWidth: icon ? '10rem' : 'auto',
+        minWidth: icon || full ? '10rem' : '75px',
         width: full ? '100%' : 'fit-content',
+        height: icon || full ? 'auto' : '',
       }}
     >
       {icon === "arrow" && <img className="icon" src="/images/arrow.svg" alt="arrow button" />}{" "}
