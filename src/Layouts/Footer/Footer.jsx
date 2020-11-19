@@ -24,7 +24,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="footer_item">Call: +2348069219037, +2347061026139</p>
-        <h5></h5>
+        <h5>{' '}</h5>
         <p className="footer_item">
           Send us an e-mail info@reflectoracademy.com
         </p>
