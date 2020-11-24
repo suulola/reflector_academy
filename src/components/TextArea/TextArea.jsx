@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextArea = ({ label, value, onChange, otherClass, required }) => {
+const TextArea = ({ label, value, onChange, otherClass, required, outline }) => {
   return (
     <div className={`d-flex flex-column mb-3 ${otherClass}`}>
       <label style={{ color: "#363636", margin: 0 }} htmlFor="">
@@ -10,8 +10,8 @@ const TextArea = ({ label, value, onChange, otherClass, required }) => {
         value={value}
         onChange={onChange}
         style={{
-          backgroundColor: "#E9E9EA",
-          border: 0,
+          backgroundColor: outline ? 'transparent' : "#E9E9EA",
+          border: outline ? '1px solid #061673' : 0,
           borderRadius: "3px",
         }}
         cols="10"

@@ -1,10 +1,11 @@
-import React from "react";
-import Button from "../../components/Button/Button";
+import React, { useState } from "react";
+import Button from "../../../components/Button/Button";
 import ReactPlayer from "react-player/youtube";
 import ScrollMenu from "react-horizontal-scrolling-menu";
-import UserCard from "../../components/UserCard/UserCard";
+import UserCard from "../../../components/UserCard/UserCard";
 import { Link } from "react-router-dom";
-import Footer from "../../Layouts/Footer/Footer";
+import Footer from "../../../Layouts/Footer/Footer";
+import Spinner from "../../../components/Spinner/Spinner";
 
 window.YTConfig = {
   host: "https://www.youtube.com",
@@ -56,18 +57,23 @@ const list = [
 ];
 
 const LandingPage = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   return (
     <div>
       <div style={styles.container} className="row">
         <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center w-100 py-3">
           <div className="w-75 p-2">
-            <h4 className="text-reflector text-pretty" >
+            <h4 className="text-reflector text-pretty">
               We are building a Community that promotes Leadership, Innovation
               and Enterprise Development
             </h4>
             <div className="d-flex">
-              <Link to="/register"><Button text="Join Us" solid={true} /></Link>
-              <Link to="/login"><Button text="Log In" solid={false} /></Link>
+              <Link to="/register">
+                <Button text="Join Us" solid={true} />
+              </Link>
+              <Link to="/login">
+                <Button text="Log In" solid={false} />
+              </Link>
             </div>
           </div>
         </div>
@@ -86,15 +92,36 @@ const LandingPage = () => {
           Welcome to Reflector Academy
         </p>
         <div className="mb-4">
-          <ReactPlayer style={{minWidth: 200, maxWidth: 700}} width="75vw" url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
+          {!videoLoaded && (
+            <div className="d-flex justify-content-center mb-3">
+              <Spinner />
+            </div>
+          )}
+          <ReactPlayer
+            style={{ minWidth: 200, maxWidth: 700 }}
+            width="75vw"
+            url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+            onReady={(ready) => {
+              console.log(ready, "((((((");
+              setVideoLoaded(true);
+            }}
+          />
         </div>
-        <Button text="See other Video Resources" solid={false} icon="arrow" />
+        <Link to="/video-resource">
+          <Button
+            text="See other Video Resources"
+            solid={false}
+            icon="/images/arrow.svg"
+          />
+        </Link>
       </div>
       <div style={styles.registerSection}>
         <h5 style={styles.invite}>
           Be a part of our next Leadership Conference
         </h5>
-        <Button text="Register Here" solid={false} white full={false} />
+        <Link to="/register">
+          <Button text="Register Here" solid={false} white full={false} />
+        </Link>
       </div>
 
       <div
@@ -153,7 +180,7 @@ const LandingPage = () => {
             }
             data={list.map((item, index) => (
               <UserCard
-              otherClass="mx-4 dashboard_user_card"
+                otherClass="mx-4 dashboard_user_card"
                 key={index}
                 name={item.name}
                 description={item.description}
@@ -162,16 +189,16 @@ const LandingPage = () => {
             ))}
           />
 
-          <div className="p-5 mt-3 d-flex justify-content-center">
-            <Button text="See More" solid={false} icon="arrow" />
-          </div>
+          <Link
+            to="/members"
+            className="p-5 mt-3 d-flex justify-content-center"
+          >
+            <Button text="See More" solid={false} icon="/images/arrow.svg" />
+          </Link>
         </div>
       </div>
 
       <Footer />
-    
-
-    
     </div>
   );
 };
