@@ -5,7 +5,7 @@ const ImageTextBox = ({ first, title, subTitle, description, img }) => {
     <>
       {first ? (
         <div className="row mb-5">
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6 px-0">
             <img className="w-100" src={img} alt={title} />
           </div>
           <div className="col-12 col-md-6 pt-3 pr-2">
@@ -18,7 +18,7 @@ const ImageTextBox = ({ first, title, subTitle, description, img }) => {
           </div>
         </div>
       ) : (
-        <div className="row mb-5">
+        <div className="row mb-5 flex-column-reverse flex-md-row">
           <div className="col-12 col-md-6 pt-3">
             <div className="d-flex align-items-center">
               <img width={20} src="/images/red_star.svg" alt="stars" />
@@ -29,7 +29,7 @@ const ImageTextBox = ({ first, title, subTitle, description, img }) => {
             <p className="mt-3 w-100 text-justify">{description}</p>
           </div>
 
-          <div className="col-12 col-md-6 pl-0">
+          <div className="col-12 col-md-6 px-0">
             <img className="w-100" src={img} alt={title} />
           </div>
         </div>

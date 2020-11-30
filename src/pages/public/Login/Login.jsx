@@ -6,11 +6,11 @@ import './Login.scss';
 
 const Login = () => {
   return <div className="login_container" style={styles.container}>
-      <div className="d-flex flex-column align-items-center card py-4 px-5">
+      <div className="d-flex flex-column align-items-center card py-4 px-5 no_shadow">
           <h5 className="text-reflector" style={{fontWeight: 600}}>Login to your Dashboard</h5>
 
-          <TextInput otherClass="w-100 login_style" label={"Username"} />
-          <TextInput otherClass="w-100 login_style" label={"Email Address"} />
+          {/* <TextInput otherClass="w-100 login_style" label={"Username"} /> */}
+          <TextInput otherClass="w-100 login_style" label={"Username/Email Address"} />
           <TextInput otherClass="w-100 login_style margin_bottom_0" label={"Password"} />
           <div className="m-0 p-0 w-100 text-right">Forgot Password?</div>
 

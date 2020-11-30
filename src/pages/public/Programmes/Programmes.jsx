@@ -5,7 +5,7 @@ import Footer from "../../../Layouts/Footer/Footer";
 const Programmes = () => {
   return (
     <>
-      <div className="p-3">
+      <div className="p-0 p-md-3">
         <h3 className="text-reflector p-3">Programmes</h3>
 
         <ImageTextBox

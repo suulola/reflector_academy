@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import Footer from "../../../Layouts/Footer/Footer";
 import Spinner from "../../../components/Spinner/Spinner";
 
+import './Landing.scss'
+
 window.YTConfig = {
   host: "https://www.youtube.com",
 };
@@ -62,12 +64,24 @@ const LandingPage = () => {
     <div>
       <div style={styles.container} className="row">
         <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center w-100 py-3">
-          <div className="w-75 p-2">
-            <h4 className="text-reflector text-pretty">
+          <div className="w-100 p-2">
+            <h4 className="d-none d-md-block text-reflector">
               We are building a Community that promotes Leadership, Innovation
               and Enterprise Development
             </h4>
-            <div className="d-flex">
+            <h4 className="d-block d-md-none text-reflector text-center">
+              We are building a Community that promotes Leadership, Innovation
+              and Enterprise Development
+            </h4>
+            <div className="d-flex justify-content-center d-md-none">
+              <Link to="/register">
+                <Button text="Join Us" solid={true} />
+              </Link>
+              <Link to="/login">
+                <Button text="Log In" solid={false} />
+              </Link>
+            </div>
+            <div className="d-none d-md-flex">
               <Link to="/register">
                 <Button text="Join Us" solid={true} />
               </Link>
@@ -85,12 +99,12 @@ const LandingPage = () => {
         style={styles.videoIntro}
         className="d-flex flex-column justify-content-center align-items-center"
       >
-        <h2 className="text-center text-reflector my-4 d-none d-md-block">
+        <h2 className="text-center text-reflector my-4">
           Welcome to Reflector Academy
         </h2>
-        <p className="text-reflector d-sm-block d-md-none text-center p-3">
+        {/* <p className="text-reflector d-sm-block d-md-none text-center p-3">
           Welcome to Reflector Academy
-        </p>
+        </p> */}
         <div className="mb-4">
           {!videoLoaded && (
             <div className="d-flex justify-content-center mb-3">
@@ -115,8 +129,16 @@ const LandingPage = () => {
           />
         </Link>
       </div>
-      <div style={styles.registerSection}>
+      <div className="d-none d-md-block" style={styles.registerSection}>
         <h5 style={styles.invite}>
+          Be a part of our next Leadership Conference
+        </h5>
+        <Link to="/register">
+          <Button text="Register Here" solid={false} white full={false} />
+        </Link>
+      </div>
+      <div className="d-flex align-items-center d-md-none" style={styles.registerSection}>
+        <h5 style={styles.invite} className="w-100 text-center">
           Be a part of our next Leadership Conference
         </h5>
         <Link to="/register">
@@ -206,7 +228,7 @@ const LandingPage = () => {
 const styles = {
   container: {
     backgroundColor: "#E9E9EA",
-    height: 350,
+    minHeight: 350,
   },
   introImg: {
     backgroundImage: "url('/images/teach.svg')",
@@ -216,7 +238,7 @@ const styles = {
     backgroundPosition: "center",
   },
   videoIntro: {
-    padding: "5rem",
+    padding: "2rem",
   },
   registerSection: {
     backgroundImage: "url('/images/bg_blue.svg')",

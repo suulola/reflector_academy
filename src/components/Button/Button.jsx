@@ -5,13 +5,13 @@ function Button({ text, solid, icon, white, full, otherClass }) {
   return (
     <button
       id="button"
-      className={`btn btn-sm mr-2 ${
+      className={` d-flex justify-content-center align-items-center btn btn-sm mr-2 ${
         solid ? " btn-reflector" : "btn btn-outline-reflector"
       } ${otherClass}`}
       style={{
         color: white || solid ? "white" : "#061673",
         border: white ? "1px solid #fff" : "1px solid #061673",
-        minWidth: icon || full ? "10rem" : "75px",
+        minWidth: icon || full ? "10rem" : "100px",
         width: full ? "100%" : "fit-content",
         height: icon || full ? "2.5rem" : "",
       }}

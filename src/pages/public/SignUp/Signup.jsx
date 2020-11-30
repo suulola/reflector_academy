@@ -7,11 +7,11 @@ import "./SignUp.scss";
 
 const Signup = () => {
   return (
-    <div className="register_container">
+    <div className="register_container row">
       <div className="first_part col-12 col-md-6" style={styles.firstPart}>
         <div style={{height: '20%'}} className="p-4 d-flex flex-column justify-content-center align-items-center">
-          <h4 style={{fontSize: '2.4rem', fontWeight: '300'}} className="text-white text-pretty mb-1">Earn 5 stars </h4>
-          <h5 className="text-white text-pretty">
+          <h4 style={{fontSize: '2.4rem', fontWeight: '300'}} className="text-white text-center mb-1 pt-4">Earn 5 stars </h4>
+          <h5 style={{fontSize: '1rem'}} className="text-white text-center">
             {" "}
             Become a Reflector Academy General
           </h5>
@@ -25,7 +25,7 @@ const Signup = () => {
             image={"/images/user1.svg"}
           />
           </div>
-          <div className="ml-2 d-flex align-items-end mb-1">
+          <div className="ml-2 align-items-end mb-1 d-none d-md-flex">
           <UserCard
             name={"Oladapo Ayoife"}
             description={`My experience as a Reflector Academy General has been thrilling over the past 6 months and I’m on my way to becoming a catalyst for change in the society.`}

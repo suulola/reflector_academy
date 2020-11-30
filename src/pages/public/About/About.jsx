@@ -45,9 +45,11 @@ const About = () => {
             position: "absolute",
             top: "10rem",
             bottom: "10rem",
-            left: "10rem",
-            right: "10rem",
-            minWidth: 400,
+            left: 0,
+            right: 0,
+            height: 'fit-content',
+            maxWidth: 550,
+            margin: "0 auto",
           }}
         >
           <p>
@@ -73,7 +75,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="row px-5 pb-5">
+      <div className="row pb-5 mt-5">
         <div className="col-12 col-md-6 px-0">
           <img className="w-100" src="/images/vision.svg" alt="vision" />
         </div>
@@ -82,12 +84,12 @@ const About = () => {
             <img src="/images/red_star.svg" alt="stars" />
             <h6 className="mt-1 mb-0 ml-2">Vision</h6>
           </div>
-          <p className="w-75">
+          <p className="w-100">
             To be the leading institutionalized channel educating, enabling and
             empowering the largest population of young Africans at any time.
           </p>
         </div>
-        <div className="col-12 col-md-6 pt-5 p-0">
+        <div className="d-none d-md-block col-12 col-md-6 pt-5">
           <div className="d-flex align-items-center mb-3">
             <img src="/images/red_star.svg" alt="stars" />
             <h6 className="mt-1 mb-0 ml-2">Mission</h6>
@@ -100,6 +102,17 @@ const About = () => {
         </div>
         <div className="col-12 col-md-6 px-0">
           <img className="w-100" src="/images/mission.svg" alt="vision" />
+        </div>
+        <div className="d-md-none col-12 col-md-6 pt-3 px-4 pt-5">
+          <div className="d-flex align-items-center mb-3">
+            <img src="/images/red_star.svg" alt="stars" />
+            <h6 className="mt-1 mb-0 ml-2">Mission</h6>
+          </div>
+          <p className="w-100">
+          By creating multiple educational platforms and networks, Reflector
+            Academy exists to connect young Africans to personal and
+            professional development tools and opportunities.
+          </p>
         </div>
       </div>
       <Footer />

@@ -10,7 +10,7 @@ const Ebook = () => {
         <h4 className="weight-500 text-center text-reflector">
           Digital Skills For the Future Ebook
         </h4>
-        <div className="w-50">
+        <div  style={{maxWidth: 460}} className="w-100">
           <img
             className="w-100"
             src="/images/ebook_suit_man.svg"
@@ -20,7 +20,7 @@ const Ebook = () => {
         <p className="weight-400 text-center pt-4">
           Fill in your details to download the Ebook
         </p>
-        <div className="w-50">
+        <div   style={{maxWidth: 460}} className="w-100">
           <TextInput
             otherClass="w-100 contact_input_style"
             label={"Name"}

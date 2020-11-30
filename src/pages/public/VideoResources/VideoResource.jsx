@@ -50,21 +50,21 @@ const allCourse = [
 const VideoResource = () => {
   return (
     <>
-      <div className="bg-grey p-3">
+      <div className="bg-grey p-0 px-md-3">
         <h4 className="text-reflector text-center pt-4">Video Resources</h4>
         <div className="w-100 d-flex justify-content-center">
         <VideoCard 
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor
         donec lectus dictum amet posuere ut."
-        otherClass="w-75" showCard={true} />
+        otherClass="w-100 px-md-5 mx-md-5" showCard={true} />
         </div>
-        <div className="w-100 row px-2">
+        <div className="w-100 row px-0 px-md-2">
           {allCourse.map((item, i) => (
-            <div key={i} className="col-12 col-md-4 d-flex">
+            <div key={i} className="col-12 col-md-4 d-flex px-0">
               <VideoCard 
               height={150}
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-              otherClass="sm_vid_card mb-3" showCard={true} />
+              otherClass="sm_vid_card mb-3 mx-0 mx-md-3" showCard={true} />
             </div>
           ))}
         </div>
