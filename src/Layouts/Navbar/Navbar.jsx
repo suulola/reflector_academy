@@ -68,7 +68,7 @@ const Navbar = () => {
             <Link to="/programmes">Reflector Web Series</Link>
             <Link to="/programmes">Workshop Conference</Link>
           </div>
-
+{/* 
           <div className="mb-4">
             <h4 className="text-white weight-400 mb-0">Resource Library</h4>
             <Link to="/blog">Newsletter</Link>
@@ -76,7 +76,11 @@ const Navbar = () => {
             <Link to="/moments">Picture Gallery</Link>
             <Link to="/ebook">Free Ebook</Link>
             <Link to="/video-resource">Video Library</Link>
-          </div>
+          </div> */}
+
+          <Link to="/event/new-year">
+            <h4 className="text-white weight-400 mb-4">Goals Event</h4>
+          </Link>
 
           <Link to="/contact">
             <h4 className="text-white weight-400 mb-4">Contact Us</h4>
