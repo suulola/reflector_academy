@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import { useHistory } from "react-router-dom";
 import Button from "../../../components/Button/Button";
 import TextArea from "../../../components/TextArea/TextArea";
 import TextInput from "../../../components/TextInput/TextInput";
 import "./EventSignup.scss";
 
 const EventSignup = () => {
-  // const history = useHistory();
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
