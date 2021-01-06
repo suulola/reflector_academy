@@ -35,8 +35,11 @@ const EventSignup = () => {
       </div>
       <form
         method="POST"
+        action="/contact/?success=true"
         data-netlify="true"
-        name="newYearEvent" className="second_part col-12 col-md-6 p-5">
+        name="newYearEvent" 
+        className="second_part col-12 col-md-6 p-5"
+        >
         {success && (
           <p style={{ color: "green" }}>Thanks for registering! You will be contacted on the next line of action </p>
         )}
