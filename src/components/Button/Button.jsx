@@ -1,9 +1,11 @@
 import React from "react";
 import "./Button.scss";
 
-function Button({ text, solid, icon, white, full, otherClass }) {
+function Button({ type, text, solid, icon, white, full, otherClass, onClick }) {
   return (
     <button
+      onClick={onClick}
+      type={type}
       id="button"
       className={` d-flex justify-content-center align-items-center btn btn-sm mr-2 ${
         solid ? " btn-reflector" : "btn btn-outline-reflector"

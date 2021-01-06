@@ -7,6 +7,7 @@ import Blog from './pages/public/Blog/Blog';
 import BlogDetail from './pages/public/Blog/BlogDetail';
 import ContactUs from './pages/public/Contact/ContactUs';
 import Ebook from './pages/public/Ebook/Ebook';
+import EventSignup from './pages/public/EventSignup/EventSignup';
 import LandingPage from './pages/public/Landing/LandingPage';
 import Login from './pages/public/Login/Login';
 import MomentInPictures from './pages/public/MomentInPictures/MomentInPictures';
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/" component={LandingPage} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Signup} />
+        <Route path="/event/new-year" component={EventSignup} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={ContactUs} />
         <Route path="/profile" component={Profile} />
