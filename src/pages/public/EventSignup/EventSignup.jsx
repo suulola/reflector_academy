@@ -39,7 +39,7 @@ const EventSignup = () => {
         className="second_part col-12 col-md-6 p-5"
         >
         {success && (
-          <p style={{ color: "green" }}>Thanks for registering! You will be contacted on the next line of action </p>
+          <p className="text-reflector">Thanks for registering! You will be contacted on the next line of action </p>
         )}
         <input type="hidden" name="form-name" value="newYearEvent" />
         <TextInput required label={"Name"} name="name" />

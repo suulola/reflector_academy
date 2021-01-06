@@ -7,6 +7,7 @@ const TextArea = ({ name, label, value, onChange, otherClass, required, outline 
         {label} {required && <span className="text-danger">*</span>}
       </label>
       <textarea
+        required={required}
         name={name}
         value={value}
         onChange={onChange}
