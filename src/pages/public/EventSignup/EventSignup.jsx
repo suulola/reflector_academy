@@ -42,9 +42,9 @@ const EventSignup = () => {
           <p style={{ color: "green" }}>Thanks for registering! You will be contacted on the next line of action </p>
         )}
         <input type="hidden" name="form-name" value="newYearEvent" />
-        <TextInput label={"Name"} name="name" />
-        <TextInput label={"Email Address"} name="email" />
-        <TextInput label={"Location(State and Country)"} name="location" />
+        <TextInput required label={"Name"} name="name" />
+        <TextInput required label={"Email Address"} name="email" />
+        <TextInput required label={"Location(State and Country)"} name="location" />
         <TextArea
           otherClass="w-100"
           label={"What are your expectations from the event?"}
