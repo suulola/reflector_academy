@@ -36,6 +36,7 @@ const Navbar = () => {
 
       <div className="d-none d-md-flex justify-content-around w-100 mw-600">
        
+        <Link to="/event/new-year">Goals</Link>
         <Link to="/about">About Us</Link>
         <Link to="/programmes">Programmes</Link>
         <Link to="library">Resource Library</Link>

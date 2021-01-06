@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import Button from "../../../components/Button/Button";
 import TextArea from "../../../components/TextArea/TextArea";
 import TextInput from "../../../components/TextInput/TextInput";
 import "./EventSignup.scss";
 
 const EventSignup = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const EventSignup = () => {
         method="POST"
         data-netlify="true"
         name="newYearEvent" className="second_part col-12 col-md-6 p-5">
-        {!success && (
+        {success && (
           <p style={{ color: "green" }}>Thanks for registering! You will be contacted on the next line of action </p>
         )}
         <input type="hidden" name="form-name" value="newYearEvent" />
